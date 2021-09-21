@@ -1,3 +1,53 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 body{
-    background-color: royalblue;
+    background-color: slategray;
+}
+
+.container {
+    background-color: tomato;
+    display: flex;
+    width: 700px;
+    height: 335px;
+    margin: auto;
+    margin-top: 7%;
+}
+
+.right, .left{
+    width: 50%;
+}
+
+.left{
+    text-align: center;
+    width: 100%;
+}
+
+.container img{
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 320px){
+    body{
+        background-color: violet;
+    }
+
+    .container{
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        height: 600px;
+        width: 283px;
+        margin-top: 11px;
+        margin-bottom: 15px;
+        
+    }
+    
+    .right{
+        width: 100%;
+        height: 35%;
+    }
+
 }
