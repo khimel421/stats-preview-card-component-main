@@ -1,5 +1,178 @@
-$primary-color: red;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 
-body{
-    background-color: $primary-color;
+/* prin=mary colors */
+
+$primary-1: hsl(233, 47%, 7%);
+$primary-2: hsl(244, 38%, 16%) ;
+$primary-3:  hsl(277, 64%, 61%); 
+
+/* Neutral color */
+
+$neutral-1: hsl(0, 0%, 100%);
+$neutral-2: hsla(0, 0%, 100%, 0.75);
+$neutral-3: hsla(0, 0%, 100%, 0.6);
+
+/* Typography*/
+
+$font-size: 15px;
+$title-font: 'Inter', sans-serif;
+$paragraph-font:    'Lexend Deca', sans-serif;
+
+*{
+    margin: 0px;
+    padding: 0px;
 }
+
+body {
+    background-color: $primary-1;
+    box-sizing: border-box;
+}
+
+.container {
+        background-color: $primary-2;
+        display: flex;
+        width: 1025px;
+        height: 390px;
+        margin: auto;
+        margin-top: 9%;
+        border-radius: 10px;
+    .right, .left{
+        width: 50%;
+    }
+    .left{
+        .text{
+            font-size: 15px;
+            padding: 52px 0px 52px 52px;
+            height: 286px;
+            margin-right: 78px;
+            h1{
+                color: $neutral-1;
+                font-family: $title-font;
+                font-weight: 700;
+                span{
+                    color: $primary-3;
+                }
+            }
+
+            p{
+                font-family: $paragraph-font;
+                font-weight: 400;
+                margin-top: 25px;
+                color: $neutral-2;
+                line-height: 22px;
+            }
+            ul{
+                display: flex;
+                list-style: none;
+                margin-top: 70px;
+                gap: 27px;
+                li{
+                    color: $neutral-3;
+                    font-size: 13px;
+                    text-transform: uppercase;
+                    span {
+                        color: $neutral-1;
+                        display: block;
+                        text-transform: lowercase;
+                        font-weight: 700;
+                        font-family: "Lexend Deca", sans-serif;
+                        font-size: 24px;
+                        margin-bottom: 3px;
+                    }
+                }
+            }
+        }
+    }
+    .right{
+        background-image: url('./images/image-header-desktop.jpg');
+        border-radius: 10px;
+        .overlay{
+            background-color: $primary-3;
+            height: 390px;
+            opacity: 0.7;
+            border-radius: 10px;
+        }
+    } 
+}
+
+@media only screen and (max-width: 320px){
+    body{
+        background-color: $primary-1;
+        
+        .container{
+            flex-direction: column-reverse;
+            background-color: $primary-2;
+            height: 724px;
+            width: 285px;
+            margin: auto ;
+            margin-top: 45px;
+            border-radius: 10px;
+            .right {
+                background-image: url("./images/image-header-mobile.jpg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: 41%;
+                width: 100%;
+                border-radius: 10px 10px 0px 0px;
+                .overlay {
+                    background-color: #4e1671;
+                    height: 100%;
+                    opacity: 0.7;
+                    border-radius: 10px 10px 0px 0px;
+                }
+                
+            }
+            .left{
+                height: 100%;
+                width: 100%;
+                .text{
+                    margin-top: 20px;
+                    text-align: center;
+                    padding: 15px;
+                    margin-right: 0px;
+                    h1{
+                        font-family: $title-font;
+                        font-size: 20px;
+                        font-weight: 700;
+                        color: $neutral-1;
+                        span{
+                            color: $primary-3;
+                        }
+                    }
+                    p{
+                        margin-top: 15px;
+                        color: $neutral-3;
+                        font-family: $paragraph-font;
+                        font-size: 13px;
+                        padding: 10px;
+                    }
+                    ul{
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        list-style: none;
+                        margin-top: 33px;
+                        gap: 36px;
+                        font-family: $paragraph-font;
+                        li{
+                            text-transform: uppercase;
+                            color: $neutral-2;
+                            font-family: $paragraph-font;
+                            font-weight: 400;
+                            font-size: 11px;
+                            span{
+                                color: $neutral-1;
+                                font-weight: 700;
+                                font-family: $title-font;
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
