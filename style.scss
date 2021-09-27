@@ -86,17 +86,17 @@ body {
     }
     .right{
         background-image: url('./images/image-header-desktop.jpg');
-        border-radius: 10px;
+        border-radius: 0px 10px 10px 0px;
         .overlay{
             background-color: $primary-3;
             height: 390px;
             opacity: 0.7;
-            border-radius: 10px;
+            border-radius: 0px 10px 10px 0px;
         }
     } 
 }
 
-@media only screen and (max-width: 300px){
+@media only screen and (max-width: 390px){
     body{
         background-color: $primary-1;
         
